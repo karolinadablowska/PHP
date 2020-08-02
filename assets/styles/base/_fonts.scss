@@ -1,0 +1,15 @@
+// mixin
+@import "../utils/mixins/_font-face.scss";
+
+// loader
+@each $font-name, $font-data in $FONTS {
+
+	// throw error if the font data is empty
+	@if (length($font-data) == 0) { @error "No font '#{$font-name}' data was provided." }
+
+	// load data
+	@each $font-style, $font-weight, $file-name in $font-data {
+
+		@include font-face($font-name, $font-style, $font-weight, $file-name);
+	}
+}
