@@ -1,0 +1,11 @@
+@mixin font-face($font-name_, $font-style_, $font-weight_, $file-name_) {
+
+	@font-face {
+
+		font-family: quote($font-name_);
+		font-style: $font-style_;
+		font-weight: $font-weight_;
+
+		src: url("../../../media/fonts/#{$font-name_}-#{$file-name_}.ttf") format("truetype");		
+	}
+}

@@ -1,0 +1,34 @@
+.footer {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: auto;
+	
+	padding: 15px;
+	
+	position: fixed;
+	left: 0; bottom: 0;
+	
+	background-color: rgba(230, 230, 230, 0.6);
+	
+	font-style: italic;
+	font-family: $font-montserrat;
+	
+	&__year {
+	
+		margin-right: 10px;
+	
+		font-size: 15px;
+		font-weight: $font-weight-regular;
+	}
+	
+	&__company {
+	
+		font-size: 17px;
+		font-weight: $font-weight-semibold;
+	}
+}
+

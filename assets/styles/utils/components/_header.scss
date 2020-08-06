@@ -1,0 +1,27 @@
+.header {
+
+	display: flex;
+	justify-content: center;
+	
+	width: 100%;
+	height: auto;
+	
+	padding: 30px;
+	
+	&__logo {
+	
+		display: inline-block;
+		
+		width: auto;
+		height: auto;
+		
+		& > i {
+		
+			color: red;
+			
+			width: 30px;
+			height: auto;
+		}
+	}
+}
+
