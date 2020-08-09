@@ -1,12 +1,51 @@
 {% extends "base.html.twig" %}
 
+{# head scripts #}
+{% block head_scripts %}
+
+    {{ parent() }}
+    {{ encore_entry_link_tags("scripts/user-sign-in") }}
+
+{% endblock %}
+
 {% block page_content %}
 
-{% include "header.html.twig" %}
+    <div class="user-sign-in">
 
-User sign in page text OK 2
+        <div class="user-sign-in-form">
 
-{% include "footer.html.twig" %}
+            {# header #}
+            <div class="user-sign-in-form-header">
+
+                <span>Zaloguj się</span>
+
+            </div>
+
+            {# body #}
+            <div class="user-sign-in-form-body">
+
+                form body
+
+            </div>
+
+            {# footer #}
+            <div class="user-sign-in-form-footer">
+
+                form footer
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{# footer scripts #}
+{% block footer_scripts %}
+    
+    {{ parent() }}
+    {{ encore_entry_script_tags("scripts/user-sign-in") }}
 
 {% endblock %}
 

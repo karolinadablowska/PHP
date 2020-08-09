@@ -15,20 +15,32 @@
 	background-color: rgba(230, 230, 230, 0.6);
 	
 	font-style: italic;
-	font-family: $font-montserrat;
+	font-family: $calendar-font-montserrat;
 	
-	&__year {
+	&-year {
 	
 		margin-right: 10px;
 	
 		font-size: 15px;
-		font-weight: $font-weight-regular;
+		font-weight: $calendar-font-weight-regular;
+
+		&:before {
+
+			display: inline-block;
+
+			width: auto;
+			height: auto;
+
+			margin-right: 5px;
+
+			content: "\00a9";
+		}
 	}
 	
-	&__company {
+	&-company {
 	
 		font-size: 17px;
-		font-weight: $font-weight-semibold;
+		font-weight: $calendar-font-weight-semibold;
 	}
 }
 

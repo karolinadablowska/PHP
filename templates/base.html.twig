@@ -12,13 +12,23 @@
 
 			{{ encore_entry_link_tags('styles/main') }}
 	        	
+        	{# head scripts #}
         	{% block head_scripts %}{% endblock %}
         		
 	    </head>
 	    
 	    <body>
 
+	    	{# header #}
+    		{% include "header.html.twig" %}
+
+    		{# page content #}
 			{% block page_content %}{% endblock %}
+
+			{# footer #}
+		    {% include "footer.html.twig" %}
+
+		    {# footer scripts #}
 			{% block footer_scripts %}{% endblock %}
 
 	    </body>

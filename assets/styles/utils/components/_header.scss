@@ -1,26 +1,47 @@
 .header {
 
 	display: flex;
-	justify-content: center;
+	// justify-content: center;
 	
 	width: 100%;
 	height: auto;
 	
 	padding: 30px;
 	
-	&__logo {
+	background-color: rgba(230, 230, 230, 0.6);
 	
-		display: inline-block;
+	&-logo {
+	
+		display: inline-flex;
+		align-items: center;
 		
 		width: auto;
 		height: auto;
 		
+		& > span {
+
+			padding-left: 10px;
+
+			font-style: normal;
+			font-weight: 500;
+			font-size: 30px;
+			font-family: $calendar-font-montserrat;
+
+			border-left: 1px solid black;
+		}
+
 		& > i {
 		
 			color: red;
 			
 			width: 30px;
 			height: auto;
+
+			font-size: 30px;
+
+			margin-right: 10px;
+
+			transform: rotate(-10deg);
 		}
 	}
 }

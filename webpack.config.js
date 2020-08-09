@@ -23,16 +23,10 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    // .addEntry('app', './assets/js/app.js')
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
+    .addEntry('scripts/user-sign-in', './assets/scripts/pages/user-sign-in.js')
 
-	.addStyleEntry('styles/main', [
-	
-		// './node_modules/font-awesome/css/font-awesome.min.css',
-	
-		'./assets/styles/main.scss'
-	])
+	.addStyleEntry('styles/main', './assets/styles/main.scss')
+    // .addStyleEntry('styles/user-sign-in', './assets/styles/pages/user-sign-in.scss')
 	
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -49,7 +43,7 @@ Encore
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
     .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
+    // .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
