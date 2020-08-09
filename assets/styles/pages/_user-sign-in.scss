@@ -19,6 +19,8 @@
 
         padding: 30px;
 
+		margin-top: 150px;
+		
         border-radius: 4px;
         border: 1px solid #d9d9d9;
 
@@ -30,29 +32,137 @@
             width: 100%;
             height: auto;
 
+			padding-bottom: 10px;
+			
             margin-bottom: 15px;
 
+			// border-bottom: 1px solid #d9d9d9;
+			
             font-style: normal;
+			font-weight: $calendar-font-weight-semibold;
+			font-size: 20px;
             font-family: $calendar-font-montserrat;
-
-            font-size: 20px;
-            font-weight: $calendar-font-weight-semibold;
         }
 
         &-body {
 
-            display: block;
+            display: flex;
+			flex-direction: column;
 
             width: 100%;
             height: auto;
+			
+			margin-bottom: 15px;
         }
 
         &-footer {
 
-            display: block;
+            display: flex;
+			justify-content: center;
 
             width: 100%;
             height: auto;
         }
+		
+		&-field {
+		
+			display: block;
+			
+			width: 100%;
+			height: auto;
+			
+			padding: 10px;
+			
+			text-align: center;
+			
+			font-style: normal;
+			font-weight: $calendar-font-weight-medium;
+			font-size: 15px;
+            font-family: $calendar-font-montserrat;
+			
+			color: #000;
+			
+			border-bottom: 1px solid #d9d9d9 !important;
+			
+			&:nth-last-child(n + 2) {
+			
+				margin-bottom: 15px;
+			}
+			
+			&::-webkit-input-placeholder {
+			
+				font-style: normal;
+				font-weight: $calendar-font-weight-medium;
+				font-size: 15px;
+				font-family: $calendar-font-montserrat;
+				text-align: center;
+				
+				color: #a5a6a7;
+			}
+		}
+		
+		&-button {
+		
+			display: inline-block;
+			
+			width: auto;
+			height: auto;
+			
+			padding-top: 7px;
+			padding-bottom: 7px;
+			
+			padding-left: 15px;
+			padding-right: 15px;
+			
+			text-align: center;
+		
+			border-radius: 4px;
+			background-color: #28a745;
+			
+			font-style: normal;
+			font-weight: $calendar-font-weight-medium;
+			font-size: 17px;
+            font-family: $calendar-font-montserrat;
+			
+			color: #fff;
+		}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
