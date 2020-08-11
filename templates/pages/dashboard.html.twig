@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{# head scripts #}
+{% block head_scripts %}
+
+    {{ parent() }}
+    {{ encore_entry_link_tags("scripts/user-sign-in") }}
+
+{% endblock %}
+
+{% block page_content %}
+
+      I've done it!
+
+{% endblock %}
+
+{# footer scripts #}
+{% block footer_scripts %}
+    
+    {{ parent() }}
+    {{ encore_entry_script_tags("scripts/user-sign-in") }}
+
+{% endblock %}
+
