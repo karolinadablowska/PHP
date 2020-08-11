@@ -24,6 +24,8 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('scripts/user-sign-in', './assets/scripts/pages/user-sign-in.js')
+	.addEntry('scripts/dashboard', './assets/scripts/pages/dashboard.js')
+	
 
 	.addStyleEntry('styles/main', './assets/styles/main.scss')
     // .addStyleEntry('styles/user-sign-in', './assets/styles/pages/user-sign-in.scss')

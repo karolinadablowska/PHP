@@ -1,3 +1,3 @@
-require("../../styles/pages/_dashboard-view.scss");
+require("../../styles/pages/_dashboard.scss");
 
 console.log("test OK (II)");

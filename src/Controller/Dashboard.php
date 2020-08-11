@@ -14,7 +14,7 @@
 	};*/
 
 	/**
-     * User controller.
+     * Dashboard controller.
      *
      * @author Karolina Dąblowska
      */
