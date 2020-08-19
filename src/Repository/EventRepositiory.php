@@ -4,7 +4,6 @@
 
 	namespace App\Repository;
 
-	// doctrine
 	use Doctrine\ORM\{
 
 		EntityRepository            as EntityRepository,
@@ -16,11 +15,11 @@
 	use Doctrine\Common\Collections\Criteria as Criteria;
 
 	/**
-	 * User repository.
+	 * Event repository.
      *
      * @author Karolina Dablowska
 	 */
-	class UserRepository extends EntityRepository {
+	class EventRepository extends EntityRepository {
 
 		// @todo wymagane metody: update, insert, delete, select (+ paginacja per page)
 	}

@@ -4,10 +4,8 @@
 
 	namespace App\Repository;
 
-	// inteerfaces
 	use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface as UserLoaderInterface;
 
-	// doctrine
 	use Doctrine\ORM\{
 
 		EntityRepository            as EntityRepository,
