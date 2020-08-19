@@ -1,24 +1,34 @@
 {% extends "base.html.twig" %}
 
-{# head scripts #}
-{% block head_scripts %}
+    {# head scripts #}
+    {% block head_scripts %}
 
-    {{ parent() }}
-    {{ encore_entry_link_tags("scripts/dashboard") }}
+        {{ parent() }}
+        {{ encore_entry_link_tags("scripts/dashboard") }}
 
-{% endblock %}
+    {% endblock %}
 
-{% block page_content %}
+    {# page content #}
+    {% block page_content %}
 
-      I've done it!
 
-{% endblock %}
+        <div class="container container-xl">
 
-{# footer scripts #}
-{% block footer_scripts %}
-    
-    {{ parent() }}
-    {{ encore_entry_script_tags("scripts/dashboard") }}
+            <div class="row no-gutters">
 
-{% endblock %}
+                ddd
+
+            </div>
+
+        </div>
+
+    {% endblock %}
+
+    {# footer scripts #}
+    {% block footer_scripts %}
+        
+        {{ parent() }}
+        {{ encore_entry_script_tags("scripts/dashboard") }}
+
+    {% endblock %}
 

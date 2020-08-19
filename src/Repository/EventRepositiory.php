@@ -1,7 +1,5 @@
 <?php
 
-	declare(strict_types=1);
-
 	namespace App\Repository;
 
 	use Doctrine\ORM\{
@@ -22,4 +20,19 @@
 	class EventRepository extends EntityRepository {
 
 		// @todo wymagane metody: update, insert, delete, select (+ paginacja per page)
+
+        public function createEvent() {
+
+            ;
+        }
+
+        public function updateEvent() {
+
+            ;
+        }
+
+        public function removeEvent() {
+
+            ;
+        }
 	}

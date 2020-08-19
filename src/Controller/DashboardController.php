@@ -1,7 +1,5 @@
 <?php
 
-	declare(strict_types=1);
-
 	namespace App\Controller;
 
 	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,16 +13,9 @@
 
 	/**
      * Dashboard controller.
-     *
-     * @author Karolina Dąblowska
      */
-	class Dashboard extends AbstractController {
+	class DashboardController extends AbstractController {
 
-		/**
-         * Index action.
-         *
-         * @return Response Rendered template.
-         */
 	    public function indexAction() {
 
 		    return $this->render('@pages/dashboard.html.twig');

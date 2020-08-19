@@ -1,4 +1,0 @@
-dashboard:
-    path: /dashboard
-    methods: [GET]
-    controller: App\Controller\Dashboard::indexAction
