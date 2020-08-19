@@ -1,21 +1,83 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    # providers:
+        # in_memory: { memory: ~ }
+
     providers:
-        users_in_memory: { memory: null }
+        user:
+            entity:
+                class: App\Entity\UserEntity
+
+    encoders:
+        App\Entity\UserEntity:
+            algorithm: bcrypt
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+
+        user_not_logged:
+            pattern: ^\/signin*$
+            context:  system
+            provider: user
+            methods: [GET, POST]
             anonymous: true
-            lazy: true
-            provider: users_in_memory
+
+            json_login:
+
+                check_path: user.sign_in.verify  # Dlatego, że do uwierzytelnienia korzystamy z dostawcy encji defacto "check_path" się nie wykonuje. Wymóg jest jednak taki, że zdefiniowana być musi.
+        
+        user_logged:
+            pattern: ^\/(dashboard)|(logOut).*$
+            # pattern: ^\/.+$
+            context:  system
+            provider: user
+            methods: [GET, POST]
+            
+            anonymous: false
+
+            json_login:
+
+                check_path: user.sign_in.verify
+
+            logout:
+
+                path: user.sign_out
+
+                target: user.sign_in
+
+                # Unieważnienie sesji
+                # invalidate_session: true
+
+                #delete_cookies:
+                    #a: { path: null, domain: null }
+                    #b: { path: null, domain: null }
+                #handlers: [some.service.id, another.service.id]
+                #success_handler: some.service.id
+
+                # delete_cookies: ['PHPSESSID']
 
             # activate different ways to authenticate
-            # https://symfony.com/doc/current/security.html#firewalls-authentication
 
-            # https://symfony.com/doc/current/security/impersonating_user.html
-            # switch_user: true
+        # userPasswordReset:
+        #     pattern: ^((\/password-reset\/verify))\/?$
+        #     context:  system
+        #     # provider: users
+        #     methods: [GET, POST]
+        #     anonymous: false
+            
+        #     guard:
+        #         authenticators:
+        #             - user.password.reset.authenticator
+
+        
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used

@@ -2,3 +2,13 @@ user.sign_in:
     path: /signin
     methods: [GET]
     controller: App\Controller\User\User::indexAction
+    
+user.sign_in.verify:
+    path: /signin
+    methods: [POST]
+    controller: App\Controller\User\User::logOnAction
+    
+user.sign_out:
+    path: /signout
+    methods: [GET, POST]
+    controller: App\Controller\User\User::logOffAction

@@ -6,28 +6,52 @@
 
 	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-	/*use Symfony\Component\HttpFoundation\{
+	use Symfony\Component\HttpFoundation\{
 
 		Request      as Request,
 		JsonResponse as JsonResponse,
 		Response     as Response
-	};*/
+	};
 
 	/**
      * User controller.
-     *
-     * @author Karolina Dąblowska
      */
 	class User extends AbstractController {
 
-		/**
-         * Index action.
-         *
-         * @return Response Rendered template.
-         */
 	    public function indexAction() {
 
 		    return $this->render('@pages/user_sign_in.html.twig');
 	    }
 
+	    public function logOnAction(Request $request_) {
+
+		    	switch($request_->isXmlHttpRequest()) {
+
+		    		case true:
+
+		    			// return $this->render('@pages.childs.users.logIn/page.html.twig');
+
+		    			// TOKEN CSRF
+
+		    			// $this->redirectToRoute('users.user.loggedIn');
+
+		    			return new JsonResponse(
+
+		    				array("path" => $this->generateUrl('dashboard'))
+	    				);
+
+		    			break;
+
+	    			case false:
+
+						;
+
+		    			break;
+		    	}
+	    }
+
+		public function logOffAction() {
+
+	    	;
+	    }
 	}
