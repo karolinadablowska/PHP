@@ -1,32 +1,65 @@
 require("../../styles/pages/_user-sign-in.scss");
 
-/* setTimeout(
-
-	function(){*/
+// bind event for send button of form
+$("#send").click(function() {
 		
-		var dd = JSON.stringify({"username": "kdablowska", "password": "123"})
+	// alias to error node
+	var errorNode = $(".user-sign-in-form-error");
 		
-		$.ajax(
+	// username or email, password
+	const username = $("#username").val(),
+	      password = $("#password").val();
+		
+	// encode data for send to server (diactric marks)
+	var data = JSON.stringify({"username": username, "password": password});
+		
+		// Niepoprawne dane logowania
+		
+	// send data to server (via AJAX)
+	$.ajax(
 
-			{
-				method  : 'POST',
-				url     : 'http://calendar.dablowska.local/signin',
-				dataType: 'json',
-				contentType: "application/json",
-				data    : dd,
+		{
+			method  : 'POST',
+			url     : '/signin',
+			contentType: "application/json",
+			dataType: 'json',
+			data: data,
 
-				success: function(response_) {
-					
-					// console.log(response_);
-					window.location.href = response_.path;
-				},
+			// execute if request is OK
+			success: function(response_) {
 				
-				error: function(error_, status_, eer_) {
+				switch(response_.status) {
 					
-					console.log(error_);
-				},
-			}
-		);
+					case "SUCCESS":
+					
+						window.location.href = response_.links.dashboard;
+					
+						break;
+						
+					case "ERROR_VALIDATION":
+					
+						errorNode.text(response_.errors.message);
+					
+						break;
+						
+					case "ERROR_REQUEST":
+					
+						errorNode.text(response_.errors.message);
+					
+						break;
+				}
+			},
+			
+			// execute if request is not OK
+			error: function(error_) {
+				
+				console.log(error_);
+				
+				errorNode.text("Wystąpił nieoczekiwany problem");
+			},
+		}
+	);
+});
+
 		
-	/*}, 5000
-);*/
+		

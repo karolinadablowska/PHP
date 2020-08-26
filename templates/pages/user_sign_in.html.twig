@@ -22,20 +22,23 @@
 					<span>Logowanie</span>
 
 				</div>
+				
+				{# error #}
+				<span class="user-sign-in-form-error"></span>
 
 				{# body #}
 				<div class="user-sign-in-form-body">
 
-					<input type="text" class="user-sign-in-form-field" placeholder="Email">
+					<input type="text" id="username" class="user-sign-in-form-field" placeholder="Email">
 					
-					<input type="password" class="user-sign-in-form-field" placeholder="Hasło">
+					<input type="password" id="password" class="user-sign-in-form-field" placeholder="Hasło">
 
 				</div>
 
 				{# footer #}
 				<div class="user-sign-in-form-footer">
 
-					<input type="button" class="user-sign-in-form-button" value="Zaloguj się">
+					<input type="button" id="send" class="user-sign-in-form-button" value="Zaloguj się">
 
 				</div>
 
