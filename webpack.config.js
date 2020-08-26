@@ -67,6 +67,20 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery();
 
+	Encore.configureLoaderRule('scss', (loaderRule) => {
+    loaderRule.oneOf.forEach((rule) => {
+        rule.use.push({
+            loader: 'sass-resources-loader',
+            options: {
+                resources: [
+                    // Change this to your _variables.scss path
+					path.resolve(__dirname, './assets/styles/base/_typography.scss')
+                ]
+            },
+        })
+    })
+})
+	
 // encore config
 var encoreConfig = Encore.getWebpackConfig();
 

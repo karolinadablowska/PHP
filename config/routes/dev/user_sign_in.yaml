@@ -12,3 +12,8 @@ user.sign_out:
     path: /signout
     methods: [GET, POST]
     controller: App\Controller\User\User::logOffAction
+    
+user.sign_in.fddd:
+    path: /
+    methods: [GET]
+    controller: App\Controller\User\User::indexAction

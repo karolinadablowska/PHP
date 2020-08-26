@@ -1,7 +1,7 @@
 .header {
 
 	display: flex;
-	// justify-content: center;
+	justify-content: space-between;
 	
 	width: 100%;
 	height: auto;
@@ -42,6 +42,19 @@
 			margin-right: 10px;
 
 			transform: rotate(-10deg);
+		}
+	}
+	
+	&-text {
+	
+		display: inline-block;
+		
+		width: auto;
+		height: auto;
+		
+		&-singout {
+		
+			color: red;
 		}
 	}
 }

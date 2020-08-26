@@ -24,12 +24,13 @@ security:
             methods: [GET, POST]
             anonymous: true
 
+            lazy: true
             json_login:
 
                 check_path: user.sign_in.verify  # Dlatego, że do uwierzytelnienia korzystamy z dostawcy encji defacto "check_path" się nie wykonuje. Wymóg jest jednak taki, że zdefiniowana być musi.
         
         user_logged:
-            pattern: ^\/(dashboard)|(logOut).*$
+            pattern: ^\/(dashboard)|(signout).*$
             # pattern: ^\/.+$
             context:  system
             provider: user

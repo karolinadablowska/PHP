@@ -1,8 +1,10 @@
 require("../../styles/pages/_user-sign-in.scss");
 
-setTimeout(
+/* setTimeout(
 
-	function(){
+	function(){*/
+		
+		var dd = JSON.stringify({"username": "kdablowska", "password": "123"})
 		
 		$.ajax(
 
@@ -10,18 +12,13 @@ setTimeout(
 				method  : 'POST',
 				url     : 'http://calendar.dablowska.local/signin',
 				dataType: 'json',
-				data    : {
-
-					data: {
-						
-						username: "kdablowska",
-						password: "123"
-					}
-				},
+				contentType: "application/json",
+				data    : dd,
 
 				success: function(response_) {
 					
-					console.log(response_);
+					// console.log(response_);
+					window.location.href = response_.path;
 				},
 				
 				error: function(error_, status_, eer_) {
@@ -31,5 +28,5 @@ setTimeout(
 			}
 		);
 		
-	}, 5000
-);
+	/*}, 5000
+);*/
