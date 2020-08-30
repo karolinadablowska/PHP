@@ -18,7 +18,7 @@ security:
             security: false
 
         user_not_logged:
-            pattern: ^\/signin*$
+            pattern: ^\/(signin*)|(\/)$
             context:  system
             provider: user
             methods: [GET, POST]
