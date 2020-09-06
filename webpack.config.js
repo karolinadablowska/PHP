@@ -65,21 +65,27 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    .autoProvidejQuery();
+    .autoProvidejQuery()
 
-	Encore.configureLoaderRule('scss', (loaderRule) => {
-    loaderRule.oneOf.forEach((rule) => {
-        rule.use.push({
-            loader: 'sass-resources-loader',
-            options: {
-                resources: [
-                    // Change this to your _variables.scss path
-					path.resolve(__dirname, './assets/styles/base/_typography.scss')
-                ]
-            },
+	.configureLoaderRule('scss', loaderRule => {
+
+        loaderRule.oneOf.forEach(rule => {
+
+            rule.use.push({
+
+                loader: 'sass-resources-loader',
+                options: {
+
+                    resources: [
+
+                        path.resolve(__dirname, './assets/styles/base/_typography.scss'),
+                        path.resolve(__dirname, './assets/styles/base/_functions.scss'),
+                        path.resolve(__dirname, './assets/styles/vendor/bootstrap/_grid.scss')
+                    ]
+                }
+            })
         })
-    })
-})
+    });
 	
 // encore config
 var encoreConfig = Encore.getWebpackConfig();

@@ -1,3 +1,5 @@
 require("../../styles/pages/_dashboard.scss");
 
-console.log("test OK (II)");
+import ModalAddEvent from "../modals/events/add.js";
+
+new ModalAddEvent();

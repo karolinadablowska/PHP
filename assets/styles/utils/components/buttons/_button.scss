@@ -1,0 +1,32 @@
+.button {
+
+	display: inline-block;
+	
+	width: auto;
+	height: auto;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	border-radius: 4px;
+	
+	font-style: normal;
+	font-weight: $calendar-font-weight-semibold;
+	font-size: 16px;
+	font-family: $calendar-font-montserrat;
+	
+	color: #fff;
+	
+	&-neutral {
+	
+		background-color: #007bff;
+		
+		&:hover {
+		
+			background-color: #0063cc;
+		}
+	}
+}

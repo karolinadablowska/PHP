@@ -1,8 +1,18 @@
 @charset 'UTF-8';
 
 // vendor
-@import 'vendor/bootstrap/grid';
-@import 'vendor/font-awesome/free';
+
+	// bootstrap
+    @import "vendor/bootstrap/grid";
+    @import '~bootstrap/scss/utilities/display';
+    @import '~bootstrap/scss/utilities/flex';
+    @import '~bootstrap/scss/utilities/spacing';
+
+    // font awesome
+    @import "vendor/font-awesome/free";
+
+// @import 'vendor/bootstrap/grid';
+// @import 'vendor/font-awesome/free';
 
 // base
 @import 'base/functions';
@@ -15,5 +25,54 @@
 @import 'base/normalize';
 
 // components
-@import 'utils/components/header';
-@import 'utils/components/footer';
+
+	// headers
+	@import 'utils/components/header';
+	
+	// footers
+	@import 'utils/components/footer';
+	
+	// buttons
+	@import 'utils/components/buttons/button';
+	
+	// modals
+	@import 'utils/components/modals/events/add';
+	// @import 'utils/components/modals/events/edit';
+	// @import 'utils/components/modals/events/remove';
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

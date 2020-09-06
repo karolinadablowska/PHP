@@ -30,17 +30,16 @@
 			width: 100%;
 			height: auto;
 			
+			margin-bottom: 35px;
+			
 			&-column-names {
 			
-				// display: flex;
 				display: block;
 				
 				width: 100%;
 				height: auto;
 				
-				margin-bottom: 10px;
-				
-				// padding: 5px;
+				border-bottom: 1px solid #d9d9d9;
 			
 				& .col {
 				
@@ -50,10 +49,19 @@
 					// width: 20%;
 					// height: auto;
 					
+					padding: 5px;
+					
 					font-style: normal;
 					font-weight: $calendar-font-weight-bold;
 					font-size: 16px;
 					font-family: $calendar-font-montserrat;
+					
+					background-color: #e6e6e6;
+					
+					&:nth-last-child(n + 2) {
+					
+						border-right: 1px solid #d9d9d9;
+					}
 				}
 			}
 			
@@ -64,35 +72,46 @@
 				width: 100%;
 				height: auto;
 				
-				margin-bottom: 20px;
+				& .row {
 				
-				& > ul {
-				
-					display: flex;
-			
-					padding-left: 0;
+					&:nth-last-child(n + 2) {
 					
-					& > li {
+						border-bottom: 1px solid #d9d9d9;
+					}
 					
-						display: block;
+					&:hover {
 					
-						width: 20%;
-						height: auto;
-					
-						font-style: normal;
-						font-weight: $calendar-font-weight-regular;
-						font-size: 15px;
-						font-family: $calendar-font-montserrat;
+						& > .col {
 						
-						padding: 5px;
-						
-						&:nth-child(1),
-						&:nth-child(2),
-						&:nth-child(3),
-						&:nth-child(4) {
-						
-							text-align: center;
+							background-color: rgba(230, 230, 230, 0.7);
 						}
+					}
+				}
+				
+				& .col {
+				
+					display: block;
+					
+					width: 20%;
+					height: auto;
+				
+					font-style: normal;
+					font-weight: $calendar-font-weight-medium;
+					font-size: 15px;
+					font-family: $calendar-font-montserrat;
+					
+					padding: 5px;
+					
+					cursor: default;
+					
+					&:nth-last-child(n + 2) {
+					
+						border-right: 1px solid #d9d9d9;
+					}
+					
+					& i {
+					
+						cursor: pointer;
 					}
 				}
 			}
@@ -101,9 +120,6 @@
 		
         &-header {
 
-            display: flex;
-            justify-content: center;
-
             width: 100%;
             height: auto;
 
@@ -111,15 +127,21 @@
 			
             margin-bottom: 15px;
 
-			// border-bottom: 1px solid #d9d9d9;
-			
             font-style: normal;
 			font-weight: $calendar-font-weight-semibold;
 			font-size: 20px;
             font-family: $calendar-font-montserrat;
         }
 
-        
+		&-footer {
+		
+			width: 100%;
+            height: auto;
+		
+			padding-top: 20px;
+		
+			border-top: 1px solid #d9d9d9;
+		}
 		
 		
 		
