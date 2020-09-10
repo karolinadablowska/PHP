@@ -11,89 +11,101 @@
     {# page content #}
     {% block page_content %}
 
+		{# event list #}
 
-        <div class="container container-xl">
+			<div class="container container-xl">
 
-            <div class="row no-gutters">
+				<div class="row no-gutters">
 
-				<div class="col col-12">
-			
-					<div class="dashboard-events">
-					
-						{# header #}
-					
-							<div class="dashboard-events-header d-flex justify-content-center">
+					<div class="col col-12">
+				
+						<div class="dashboard-events">
 						
-								Twoja lista wydarzeń
+							{# header #}
 						
-							</div>
-					
-						{# data #}
-					
-							<div class="dashboard-events-list">
-						
-								<div class="dashboard-events-list-column-names">
-								
-									<div class="row no-gutters">
-									
-										<div class="col col-1 d-flex justify-content-center">Lp.</div>
-										<div class="col col-2 d-flex justify-content-center">Nazwa</div>
-										<div class="col col-2 d-flex justify-content-center">Data od</div>
-										<div class="col col-2 d-flex justify-content-center">Data do</div>
-										<div class="col col-3 d-flex justify-content-center">Opis</div>
-										<div class="col col-1 d-flex justify-content-center">Edytuj</div>
-										<div class="col col-1 d-flex justify-content-center">Usuń</div>
-									
-									</div>
-								
+								<div class="dashboard-events-header d-flex justify-content-center">
+							
+									Twoja lista wydarzeń
+							
 								</div>
-					
-								<div class="dashboard-events-list-data">
-								
-									{% for i in 1..10 %}
-								
+						
+							{# data #}
+						
+								<div class="dashboard-events-list">
+							
+									<div class="dashboard-events-list-column-names">
+									
 										<div class="row no-gutters">
 										
-											<div class="col col-1 d-flex justify-content-center">1</div>
-											<div class="col col-2">Test I</div>
-											<div class="col col-2 d-flex justify-content-center">2020-03-04</div>
-											<div class="col col-2 d-flex justify-content-center">2020-04-03</div>
-											<div class="col col-3">Pinonszki</div>
-											<div class="col col-1 d-flex justify-content-center">
-											
-											<i class="fas fa-edit"></i>
-											
-											</div>
-											<div class="col col-1 d-flex justify-content-center">
-											
-												<i class="fas fa-trash-alt"></i>
-											
-											</div>
+											<div class="col col-1 d-flex justify-content-center">Lp.</div>
+											<div class="col col-2 d-flex justify-content-center">Nazwa</div>
+											<div class="col col-2 d-flex justify-content-center">Data od</div>
+											<div class="col col-2 d-flex justify-content-center">Data do</div>
+											<div class="col col-3 d-flex justify-content-center">Opis</div>
+											<div class="col col-1 d-flex justify-content-center">Edytuj</div>
+											<div class="col col-1 d-flex justify-content-center">Usuń</div>
 										
 										</div>
+									
+									</div>
+						
+									<div class="dashboard-events-list-data">
+									
+										{% for i in 1..10 %}
+									
+											<div class="row no-gutters">
+											
+												<div class="col col-1 d-flex justify-content-center">1</div>
+												<div class="col col-2">Test I</div>
+												<div class="col col-2 d-flex justify-content-center">2020-03-04</div>
+												<div class="col col-2 d-flex justify-content-center">2020-04-03</div>
+												<div class="col col-3">Pinonszki</div>
+												<div class="col col-1 d-flex justify-content-center">
+												
+												<i class="fas fa-edit"></i>
+												
+												</div>
+												<div class="col col-1 d-flex justify-content-center">
+												
+													<i class="fas fa-trash-alt"></i>
+												
+												</div>
+											
+											</div>
 
-									{% endfor %}
-										
+										{% endfor %}
+											
+									</div>
+						
 								</div>
-					
-							</div>
+							
+							{# buttons #}
+							
+								<div class="dashboard-events-footer d-flex justify-content-end">
+							
+									<input type="button" class="button button-neutral" value="Dodaj">
+							
+								</div>
 						
-						{# buttons #}
-						
-							<div class="dashboard-events-footer d-flex justify-content-end">
-						
-								<input type="button" class="button button-neutral" value="Dodaj">
-						
-							</div>
-					
+						</div>
+
 					</div>
-
+						
 				</div>
-					
-            </div>
 
-        </div>
+			</div>
 
+		{# modals #}
+		
+			{# add #}
+			
+				{% include "@modals/events/add.html.twig" %}
+			
+			{# edit #}
+			
+			{# remove #}
+			
+		
     {% endblock %}
 
     {# footer scripts #}

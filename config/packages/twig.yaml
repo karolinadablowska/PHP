@@ -6,4 +6,5 @@ twig:
     paths:
 
         '%kernel.project_dir%/templates/pages': pages
+        '%kernel.project_dir%/templates/modals': modals
 
