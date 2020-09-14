@@ -1,0 +1,27 @@
+.input {
+
+	display: inline-block;
+	
+	width: 100%;
+	height: auto;
+	
+	max-width: 250px;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	text-align: center;
+	
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+	border-radius: 4px;
+	
+	font-style: normal;
+	font-weight: $calendar-font-weight-regular;
+	font-size: 16px;
+	font-family: $calendar-font-montserrat;
+	
+	color: #000;
+}
