@@ -23,11 +23,7 @@
 						
 							{# header #}
 						
-								<div class="dashboard-events-header d-flex justify-content-center">
-							
-									Twoja lista wydarzeń
-							
-								</div>
+								<div class="dashboard-events-header d-flex justify-content-center">Twoja lista wydarzeń</div>
 						
 							{# data #}
 						
@@ -51,34 +47,24 @@
 						
 									<div class="dashboard-events-list-data">
 									
-										{% for i in 1..10 %}
-									
-											<div class="row no-gutters">
-											
-												<div class="col col-1 d-flex justify-content-center">1</div>
-												<div class="col col-2">Test I</div>
-												<div class="col col-2 d-flex justify-content-center">2020-03-04</div>
-												<div class="col col-2 d-flex justify-content-center">2020-04-03</div>
-												<div class="col col-3">Pinonszki</div>
-												<div class="col col-1 d-flex justify-content-center">
-												
-												<i class="fas fa-edit"></i>
-												
-												</div>
-												<div class="col col-1 d-flex justify-content-center">
-												
-													<i class="fas fa-trash-alt"></i>
-												
-												</div>
-											
-											</div>
-
-										{% endfor %}
-											
+										{% include "@pages/parts/single-event-row.html.twig" with {"events_per_page": events_per_page} only %}
+	
 									</div>
 						
 								</div>
 							
+							{# pagination #}
+
+								<div class="dashboard-events-pagination d-flex justify-content-center">
+							
+									{% for i in 1..page_number %}
+
+										<span data-page-number="{{ i }}">{{ i }}</span>
+
+									{% endfor %}
+
+								</div>
+
 							{# buttons #}
 							
 								<div class="dashboard-events-footer d-flex justify-content-end">
@@ -97,14 +83,8 @@
 
 		{# modals #}
 		
-			{# add #}
-			
-				{% include "@modals/events/add.html.twig" %}
-			
-			{# edit #}
-			
-			{# remove #}
-			
+			{% include "@modals/events/add.html.twig" %}
+			{% include "@modals/events/edit.html.twig" %}
 		
     {% endblock %}
 

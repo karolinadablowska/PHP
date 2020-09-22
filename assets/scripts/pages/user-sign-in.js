@@ -53,7 +53,7 @@ $("#send").click(function() {
 			// execute if request is not OK
 			error: function(error_) {
 				
-				console.log(error_);
+				// console.log(error_);
 				
 				errorNode.text("Wystąpił nieoczekiwany problem");
 			},

@@ -3,11 +3,14 @@
 	<a class="header-logo" href="/">
 
 		<i class="far fa-calendar-check"></i>
-
         <span>Kalendarzyk</span>
 		
 	</a>
 
-	<a class="header-text header-text-signout" href="{{ path("user.sign_out") }}">Wyloguj</a>
+	{% if app.user %}
+
+		<a class="header-signout" href="{{ path("user.sign_out") }}">Wyloguj</a>
+
+	{% endif %}
 	
 </div>

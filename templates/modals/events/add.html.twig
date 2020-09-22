@@ -1,39 +1,73 @@
 <div class="modal-add-event">
 
 	{# overlay #}
-	
-		<div class="modal-add-event-overlay"></div>
+	<div class="modal-add-event-overlay"></div>
 	
 	{# modal #}
+	<div class="modal-add-event-modal">
 	
-		<div class="modal-add-event-modal">
+		{# header #}
+		<div class="modal-add-event-modal-header">
+
+			Nowe wydarzenie
+
+			{# error #}
+			<span class="modal-add-event-modal-error"></span>
+
+		</div>
+	
+		{# body #}
+		<div class="modal-add-event-modal-body">
 		
-			{# header #}
-		
-				<div class="modal-add-event-modal-header">
-			
-					Nowe wydarzenie
-				
-				</div>
-		
-			{# body #}
-		
-				<div class="modal-add-event-modal-body">
-			
-					<input type="text" class="input input-name" placeholder="Nazwa">
-					
-					<textarea class="textarea textarea-description" placeholder="Opis"></textarea>
-				
-				</div>
-			
-			{# footer #}
-			
-				<div class="modal-add-event-modal-footer">
-			
-					<input type="button" class="button button-success button-add-event-create" value="Utwórz">
-				
-				</div>
+			<div>
+
+				{# label #}
+				<span class="modal-add-event-label">Nazwa:</span>
+
+				{# name #}
+				<input type="text" id="add-event-name" class="modal-add-event-field">
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-add-event-label">Opis:</span>
+
+				{# description #}
+				<textarea id="add-event-description" class="modal-add-event-textarea"></textarea>
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-add-event-label">Data rozpoczecia:</span>
+
+				{# start date #}
+				<input type="date" id="add-event-start-date" class="modal-add-event-field">
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-add-event-label">Data zakonczenia:</span>
+
+				{# end date #}
+				<input type="date" id="add-event-end-date" class="modal-add-event-field">
+
+			</div>
 		
 		</div>
+		
+		{# footer #}
+		<div class="modal-add-event-modal-footer">
+	
+			<input type="button" class="button button-success button-add-event-create" value="Utwórz">
+		
+		</div>
+	
+	</div>
 
 </div>

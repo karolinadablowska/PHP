@@ -2,6 +2,7 @@
 
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	
 	width: 100%;
 	height: auto;
@@ -45,17 +46,19 @@
 		}
 	}
 	
-	&-text {
-	
-		display: inline-block;
+	&-signout {
 		
+		display: inline-block;
+	
 		width: auto;
 		height: auto;
-		
-		&-singout {
-		
-			color: red;
-		}
+	
+		font-style: normal;
+		font-weight: $calendar-font-weight-semibold;
+		font-size: 16px;
+		font-family: $calendar-font-montserrat;
+
+		color: red;
 	}
 }
 

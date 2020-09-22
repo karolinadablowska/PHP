@@ -5,111 +5,91 @@
 	use Doctrine\ORM\Mapping as ORM;
 
 	/**
-	 * Event entity.
-     *
      * @ORM\Entity
 	 * @ORM\Entity(repositoryClass="App\Repository\EventRepository")
 	 * @ORM\Table(name="events")
 	 */
 	class EventEntity {
-
-		// prop
 		
-			/**
-			 * @var int Id.
-			 *
-			 * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned": true})
-		     * @ORM\Id
-		     * @ORM\GeneratedValue(strategy="AUTO")
-			 */
-			private $id;
+		/**
+		 * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned": true})
+	     * @ORM\Id
+	     * @ORM\GeneratedValue(strategy="AUTO")
+		 */
+		private $id;
 
-			/**
-		     * @var string Title.
-		     *
-		     * @ORM\Column(name="title", type="string", nullable=false, length=255)
-		     */
-		    private $title;
+		/**
+	     * @ORM\Column(name="title", type="string", nullable=false, length=255)
+	     */
+	    private $title;
 
-		    /**
-		     * @var string Description.
-			 *
-		     * @ORM\Column(name="description", type="string", nullable=true, length=255)
-		     */
-		    private $description;
+	    /**
+	     * @ORM\Column(name="description", type="string", nullable=true, length=255)
+	     */
+	    private $description;
 
-			/**
-		     * @var int Date from.
-		     *
-		     * @ORM\Column(name="dateFrom", type="int", nullable=false)
-		     */
-		    private $dateFrom;
+		/**
+	     * @ORM\Column(name="dateFrom", type="string", nullable=false)
+	     */
+	    private $dateFrom;
 
-			/**
-			 * @var int Date to.
-			 *
-		     * @ORM\Column(name="dateTo", type="int", nullable=false)
-		     */
-		    private $DateTo;
-			
-		    /**
-		     * @var int User id.
-			 *
-			 * @todo ZROBIĆ JAK BĘDZIE POPRAWNIE DZIAŁAŁO ZAPIS/ODCZYT ZDARZENIA
-		     */
-		    // private $user_id;
+		/**
+	     * @ORM\Column(name="dateTo", type="string", nullable=false)
+	     */
+	    private $dateTo;
+		
+	    /**
+		 * @todo ZROBIĆ JAK BĘDZIE POPRAWNIE DZIAŁAŁO ZAPIS/ODCZYT ZDARZENIA
+	     */
+	    // private $user_id;
 
-	    // get
+	    public function getId() {
+	    	
+	        return $this->id;
+	    }
 
-		    public function getId() {
-		    	
-		        return $this->id;
-		    }
+	    public function getTitle() {
 
-		    public function getTitle() {
+	        return $this->title;
+	    }
 
-		        return $this->title;
-		    }
+	    public function getDescription() {
 
-		    public function getDescription() {
+	        return $this->description;
+	    }
 
-		        return $this->description;
-		    }
+	    public function getDateFrom() {
 
-		    public function geDateFrom() {
+	        return $this->dateFrom;
+	    }
 
-		        return $this->dateFrom;
-		    }
+	    public function getDateTo() {
 
-		    public function getDateTo() {
+	        return $this->dateTo;
+	    }
 
-		        return $this->dateTo;
-		    }
+	    public function setId($id_) {
+	    	
+	        $this->id = $id_;
+	    }
 
-	    // set
+	    public function setTitle($title_) {
 
-		    public function setId($id_) {
-		    	
-		        $this->id = $id_;
-		    }
+	        $this->title = $title_;
+	    }
 
-		    public function setTitle($title_) {
+	    public function setDescription($description_) {
 
-		        $this->title = $title_;
-		    }
+	        $this->description = $description_;
+	    }
 
-		    public function setDescription($description_) {
+	    public function setDateFrom($dateFrom_) {
 
-		        $this->description = $description_;
-		    }
+	        $this->dateFrom = $dateFrom_;
+	    }
 
-		    public function setDateFrom($dateFrom_) {
+	    public function setDateTo($dateTo_) {
 
-		        $this->dateFrom = $dateFrom_;
-		    }
-
-		    public function setDateTo($dateTo_) {
-
-		        $this->dateTo = $dateTo_;
-		    }
+	        $this->dateTo = $dateTo_;
+	    }
 	}

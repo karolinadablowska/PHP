@@ -1,0 +1,73 @@
+<div class="modal-edit-event">
+
+	{# overlay #}
+	<div class="modal-edit-event-overlay"></div>
+	
+	{# modal #}
+	<div class="modal-edit-event-modal">
+	
+		{# header #}
+		<div class="modal-edit-event-modal-header">
+
+			Edycja wydarzenia
+
+			{# error #}
+			<span class="modal-edit-event-modal-error"></span>
+
+		</div>
+	
+		{# body #}
+		<div class="modal-edit-event-modal-body">
+		
+			<div>
+
+				{# label #}
+				<span class="modal-edit-event-label">Nazwa:</span>
+
+				{# name #}
+				<input type="text" id="edit-event-name" class="modal-edit-event-field">
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-edit-event-label">Opis:</span>
+
+				{# description #}
+				<textarea id="edit-event-description" class="modal-edit-event-textarea"></textarea>
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-edit-event-label">Data rozpoczecia:</span>
+
+				{# start date #}
+				<input type="date" id="edit-event-start-date" class="modal-edit-event-field">
+
+			</div>
+
+			<div>
+
+				{# label #}
+				<span class="modal-edit-event-label">Data zakonczenia:</span>
+
+				{# end date #}
+				<input type="date" id="edit-event-end-date" class="modal-edit-event-field">
+
+			</div>
+		
+		</div>
+		
+		{# footer #}
+		<div class="modal-edit-event-modal-footer">
+	
+			<input type="button" class="button button-success button-edit-event-edit" data-event-id="" value="Aktualizuj">
+		
+		</div>
+	
+	</div>
+
+</div>

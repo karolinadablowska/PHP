@@ -1,0 +1,23 @@
+{% for event in events_per_page %}
+
+	<div class="row no-gutters">
+	
+		<div class="col col-1 d-flex justify-content-center">{{ loop.index }}</div>
+		<div class="col col-2">{{ event.getTitle }}</div>
+		<div class="col col-2 d-flex justify-content-center">{{ event.getDateFrom }}</div>
+		<div class="col col-2 d-flex justify-content-center">{{ event.getDateTo }}</div>
+		<div class="col col-3">{{ event.getDescription }}</div>
+		<div class="col col-1 d-flex justify-content-center">
+		
+		<i class="fas fa-edit" data-event-id={{ event.getId }}></i>
+		
+		</div>
+		<div class="col col-1 d-flex justify-content-center">
+		
+			<i class="fas fa-trash-alt" data-event-id={{ event.getId }}></i>
+		
+		</div>
+	
+	</div>
+
+{% endfor %}

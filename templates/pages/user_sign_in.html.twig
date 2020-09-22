@@ -8,20 +8,18 @@
 
 {% endblock %}
 
+{# page content #}
 {% block page_content %}
 
 	<div class="container container-xl">
 
 		<div class="user-sign-in">
 
+			{# form #}
 			<div class="user-sign-in-form">
 
 				{# header #}
-				<div class="user-sign-in-form-header">
-
-					<span>Logowanie</span>
-
-				</div>
+				<div class="user-sign-in-form-header">Logowanie</div>
 				
 				{# error #}
 				<span class="user-sign-in-form-error"></span>
@@ -29,8 +27,10 @@
 				{# body #}
 				<div class="user-sign-in-form-body">
 
-					<input type="text" id="username" class="user-sign-in-form-field" placeholder="Email">
+					{# username/email field #}
+					<input type="text" id="username" class="user-sign-in-form-field" placeholder="Email" autofocus>
 					
+					{# password field #}
 					<input type="password" id="password" class="user-sign-in-form-field" placeholder="Hasło">
 
 				</div>

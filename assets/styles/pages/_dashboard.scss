@@ -100,7 +100,7 @@
 					font-size: 15px;
 					font-family: $calendar-font-montserrat;
 					
-					padding: 5px;
+					padding: 5px !important;
 					
 					cursor: default;
 					
@@ -143,9 +143,28 @@
 			border-top: 1px solid #d9d9d9;
 		}
 		
+		&-pagination {
+
+			width: 100%;
+            height: auto;
 		
-		
-		
+			padding-bottom: 20px;
+
+			font-style: normal;
+			font-weight: $calendar-font-weight-regular;
+			font-size: 15px;
+            font-family: $calendar-font-montserrat;
+
+            & > span {
+
+            	&:nth-last-child(n + 2) {
+
+            		margin-right: 7px;
+            	}
+
+            	cursor: pointer;
+            }
+		}
     }
 }
 
